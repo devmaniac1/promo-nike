@@ -1,0 +1,94 @@
+/* ================================================
+   NIKE EMAIL FLYER — RESPONSIVE STYLESHEET
+   ================================================
+   This stylesheet provides responsive overrides
+   for the Nike promotional email. It adapts the
+   table-based layout to work on mobile screens.
+   ================================================ */
+
+/* ============================
+   TABLET BREAKPOINT (< 620px)
+============================ */
+@media screen and (max-width: 620px) {
+
+  /* Make the email container fill the screen */
+  .email-container {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Scale hero image fully */
+  .hero-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* ============================
+   MOBILE BREAKPOINT (< 480px)
+============================ */
+@media screen and (max-width: 480px) {
+
+  /* ---- Product Cards: Stack Vertically ---- */
+  .product-card {
+    display: block !important;
+    width: 100% !important;
+    padding: 0 0 16px !important;
+  }
+
+  /* ---- Benefit Cells: 2-column grid on small screens ---- */
+  .benefit-cell {
+    display: inline-block !important;
+    width: 48% !important;
+    padding: 0 2px 20px !important;
+  }
+
+  /* ---- Hide desktop-only line breaks ---- */
+  .hide-mobile {
+    display: none !important;
+  }
+
+  /* ---- Reduce padding on all main content cells ---- */
+  .email-container td {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* ---- Reduce hero headline size ---- */
+  .email-container h2 {
+    font-size: 26px !important;
+  }
+
+  /* ---- Reduce section headings ---- */
+  .email-container h3 {
+    font-size: 20px !important;
+  }
+}
+
+/* ============================
+   SMALL MOBILE (< 360px)
+============================ */
+@media screen and (max-width: 360px) {
+
+  /* Benefits stack to single column */
+  .benefit-cell {
+    display: block !important;
+    width: 100% !important;
+    padding: 0 0 18px !important;
+  }
+
+  /* Further reduce heading sizes */
+  .email-container h2 {
+    font-size: 22px !important;
+  }
+
+  .email-container h3 {
+    font-size: 18px !important;
+  }
+
+  /* Smaller body text */
+  .email-container p {
+    font-size: 13px !important;
+  }
+}
