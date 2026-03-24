@@ -10,16 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="x-apple-disable-message-reformatting" />
-    <title>Nike — New Running Collection 2026</title>
+    <title>Nike — Weekly Newsletter</title>
 
     <!-- Font Awesome for social media icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-
-    <!-- Link external responsive stylesheet -->
-    <link rel="stylesheet" href="styles.css" />
 
     <!--[if mso]>
       <style>
@@ -32,11 +29,11 @@
       </style>
     <![endif]-->
 
-    <!-- Embedded styles for email clients that support <style> blocks -->
+    <!-- ============================
+       EMBEDDED STYLES + RESPONSIVE
+    ============================ -->
     <style>
-      /* ============================
-       EMAIL RESET STYLES
-    ============================ */
+      /* === EMAIL RESET === */
       body,
       table,
       td,
@@ -67,6 +64,65 @@
         color: inherit !important;
         text-decoration: none !important;
       }
+
+      /* === TABLET BREAKPOINT (< 620px) === */
+      @media screen and (max-width: 620px) {
+        .email-container {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+        .hero-img {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+        }
+      }
+
+      /* === MOBILE BREAKPOINT (< 480px) === */
+      @media screen and (max-width: 480px) {
+        /* Stack product cards vertically */
+        .product-card {
+          display: block !important;
+          width: 100% !important;
+          padding: 0 0 16px !important;
+        }
+        /* Stack tip columns */
+        .tip-col {
+          display: block !important;
+          width: 100% !important;
+          padding: 0 0 20px !important;
+        }
+        /* Hide desktop-only line breaks */
+        .hide-mobile {
+          display: none !important;
+        }
+        /* Reduce padding on all content cells */
+        .email-container td {
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+        }
+        /* Reduce hero headline size */
+        .email-container h2 {
+          font-size: 26px !important;
+        }
+        /* Reduce section headings */
+        .email-container h3 {
+          font-size: 20px !important;
+        }
+      }
+
+      /* === SMALL MOBILE (< 360px) === */
+      @media screen and (max-width: 360px) {
+        .email-container h2 {
+          font-size: 22px !important;
+        }
+        .email-container h3 {
+          font-size: 18px !important;
+        }
+        .email-container p {
+          font-size: 13px !important;
+        }
+      }
     </style>
   </head>
 
@@ -75,25 +131,23 @@
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
-      font-family:
-        &quot;Futura Bold Condensed&quot;, &quot;Futura&quot;, Arial, Helvetica,
-        sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
     "
   >
     <!-- ============================
-       PREHEADER TEXT (hidden preview text)
-  ============================ -->
+       SECTION 1: PREHEADER TEXT
+       Hidden preview text for inbox
+    ============================ -->
     <div
       style="display: none; max-height: 0px; overflow: hidden; mso-hide: all"
     >
-      New Nike performance drops are here. Shop the latest running collection
-      today.
-      &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+      Your weekly Nike update — new gear, stories, and performance tips.
+      &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
     </div>
 
     <!-- ============================
        OUTER WRAPPER TABLE
-  ============================ -->
+    ============================ -->
     <table
       role="presentation"
       cellpadding="0"
@@ -106,7 +160,7 @@
         <td align="center" style="padding: 20px 10px">
           <!-- ============================
              EMAIL CONTAINER (max-width 600px)
-        ============================ -->
+          ============================ -->
           <table
             role="presentation"
             cellpadding="0"
@@ -119,7 +173,7 @@
             <!-- ============================
                PAGE NAVIGATION BAR
                Links between Flyer and Newsletter
-           ============================ -->
+            ============================ -->
             <tr>
               <td
                 style="
@@ -144,11 +198,10 @@
                           font-family: Arial, Helvetica, sans-serif;
                           font-size: 11px;
                           font-weight: 700;
-                          color: #ffffff;
+                          color: #888888;
                           text-decoration: none;
                           text-transform: uppercase;
                           letter-spacing: 2px;
-                          border-bottom: 2px solid #ff3e00;
                           padding-bottom: 4px;
                         "
                       >
@@ -162,10 +215,11 @@
                           font-family: Arial, Helvetica, sans-serif;
                           font-size: 11px;
                           font-weight: 700;
-                          color: #888888;
+                          color: #ffffff;
                           text-decoration: none;
                           text-transform: uppercase;
                           letter-spacing: 2px;
+                          border-bottom: 2px solid #ff3e00;
                           padding-bottom: 4px;
                         "
                       >
@@ -178,9 +232,9 @@
             </tr>
 
             <!-- ============================
-               SECTION 1: HEADER / LOGO
-               Swoosh above the Nike name
-           ============================ -->
+               SECTION 2: HEADER / LOGO
+               Swoosh above Nike name, matching flyer
+            ============================ -->
             <tr>
               <td
                 style="
@@ -189,18 +243,23 @@
                   text-align: center;
                 "
               >
-                <!-- Swoosh logo (above text) -->
+                <!-- Swoosh logo -->
                 <img
                   src="images/Swoosh.png"
-                  alt="Nike Swoosh"
+                  alt="Nike Swoosh Logo"
                   width="60"
-                  style="display: block; margin: 0 auto 12px; width: 60px; height: auto;"
+                  style="
+                    display: block;
+                    margin: 0 auto 12px;
+                    width: 60px;
+                    height: auto;
+                  "
                 />
                 <!-- Nike text logo -->
                 <h1
                   style="
                     margin: 0;
-                    font-family: 'Futura Bold Condensed', 'Futura', Arial, Helvetica, sans-serif;
+                    font-family: Arial, Helvetica, sans-serif;
                     font-size: 36px;
                     font-weight: 900;
                     letter-spacing: 6px;
@@ -210,10 +269,11 @@
                 >
                   NIKE
                 </h1>
+                <!-- Tagline -->
                 <p
                   style="
                     margin: 4px 0 0;
-                    font-family: 'Futura Bold Condensed', 'Futura', Arial, Helvetica, sans-serif;
+                    font-family: Arial, Helvetica, sans-serif;
                     font-size: 11px;
                     letter-spacing: 3px;
                     color: #999999;
@@ -222,12 +282,89 @@
                 >
                   Just Do It
                 </p>
+                <!-- Subtle divider -->
+                <table
+                  role="presentation"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  width="60"
+                  align="center"
+                  style="margin: 16px auto 0"
+                >
+                  <tr>
+                    <td
+                      style="
+                        border-top: 2px solid #ff3e00;
+                        font-size: 0;
+                        line-height: 0;
+                      "
+                    >
+                      &nbsp;
+                    </td>
+                  </tr>
+                </table>
               </td>
             </tr>
 
             <!-- ============================
-               SECTION 2: HERO IMAGE + CTA
-          ============================ -->
+               SECTION 3: INTRO / WELCOME
+            ============================ -->
+            <tr>
+              <td
+                style="
+                  background-color: #111111;
+                  padding: 28px 40px 32px;
+                  text-align: center;
+                "
+              >
+                <p
+                  style="
+                    margin: 0 0 4px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 11px;
+                    font-weight: 700;
+                    letter-spacing: 3px;
+                    color: #ff3e00;
+                    text-transform: uppercase;
+                  "
+                >
+                  Weekly Newsletter
+                </p>
+                <h2
+                  style="
+                    margin: 0 0 12px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 28px;
+                    font-weight: 900;
+                    line-height: 1.2;
+                    color: #ffffff;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                  "
+                >
+                  Stay Ahead of Your Game
+                </h2>
+                <p
+                  style="
+                    margin: 0;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 15px;
+                    line-height: 1.6;
+                    color: #bbbbbb;
+                  "
+                >
+                  Here's what's new this week from Nike — fresh gear,
+                  <br class="hide-mobile" />performance insights, and stories
+                  that move you forward.
+                </p>
+              </td>
+            </tr>
+
+            <!-- ============================
+               SECTION 4: FEATURED STORY / HIGHLIGHT
+               Large hero image + headline + CTA
+            ============================ -->
             <tr>
               <td
                 style="
@@ -236,10 +373,10 @@
                   text-align: center;
                 "
               >
-                <!-- Hero image placeholder -->
+                <!-- Featured story hero image -->
                 <img
-                  src="images/HeroBanner.png"
-                  alt="Nike Running Collection 2026 — Featured shoe lineup on dark background"
+                  src="images/newsletter-hero.png"
+                  alt="Nike runner sprinting on a city road at sunrise wearing Air Zoom Pegasus shoes"
                   width="600"
                   style="
                     display: block;
@@ -260,13 +397,24 @@
                   text-align: center;
                 "
               >
+                <p
+                  style="
+                    margin: 0 0 6px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 11px;
+                    font-weight: 700;
+                    letter-spacing: 3px;
+                    color: #999999;
+                    text-transform: uppercase;
+                  "
+                >
+                  Featured Story
+                </p>
                 <h2
                   style="
-                    margin: 0 0 8px;
-                    font-family:
-                      &quot;Futura Bold Condensed&quot;, &quot;Futura&quot;,
-                      Arial, Helvetica, sans-serif;
-                    font-size: 34px;
+                    margin: 0 0 12px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 32px;
                     font-weight: 900;
                     line-height: 1.15;
                     color: #ffffff;
@@ -274,24 +422,22 @@
                     letter-spacing: 2px;
                   "
                 >
-                  Run Faster.<br />Go Further.
+                  Engineered for<br />Every Mile
                 </h2>
                 <p
                   style="
                     margin: 0 0 28px;
-                    font-family:
-                      &quot;Futura Bold Condensed&quot;, &quot;Futura&quot;,
-                      Arial, Helvetica, sans-serif;
+                    font-family: Arial, Helvetica, sans-serif;
                     font-size: 15px;
                     line-height: 1.6;
                     color: #bbbbbb;
                   "
                 >
-                  Introducing the 2026 Nike Running Collection — engineered for
-                  speed, <br class="hide-mobile" />designed for those who never
-                  settle.
+                  The next generation of Nike running technology is here.
+                  <br class="hide-mobile" />Lighter frames, reactive
+                  cushioning, and a fit that adapts to your stride.
                 </p>
-                <!-- Primary CTA Button -->
+                <!-- Primary CTA Button (white on dark — matches flyer) -->
                 <table
                   role="presentation"
                   cellpadding="0"
@@ -310,9 +456,7 @@
                         style="
                           display: inline-block;
                           padding: 14px 40px;
-                          font-family:
-                            &quot;Futura Bold Condensed&quot;,
-                            &quot;Futura&quot;, Arial, Helvetica, sans-serif;
+                          font-family: Arial, Helvetica, sans-serif;
                           font-size: 14px;
                           font-weight: 700;
                           color: #111111;
@@ -322,7 +466,7 @@
                           border-radius: 4px;
                         "
                       >
-                        Shop the Collection
+                        Explore Now
                       </a>
                     </td>
                   </tr>
@@ -331,68 +475,8 @@
             </tr>
 
             <!-- ============================
-               SECTION 3: PROMOTIONAL OFFER
-          ============================ -->
-            <tr>
-              <td
-                style="
-                  background-color: #ff3e00;
-                  padding: 28px 40px;
-                  text-align: center;
-                "
-              >
-                <p
-                  style="
-                    margin: 0 0 4px;
-                    font-family:
-                      &quot;Futura Bold Condensed&quot;, &quot;Futura&quot;,
-                      Arial, Helvetica, sans-serif;
-                    font-size: 12px;
-                    font-weight: 700;
-                    letter-spacing: 3px;
-                    color: #ffffff;
-                    text-transform: uppercase;
-                    opacity: 0.85;
-                  "
-                >
-                  Limited Time Offer
-                </p>
-                <h3
-                  style="
-                    margin: 0 0 6px;
-                    font-family:
-                      &quot;Futura Bold Condensed&quot;, &quot;Futura&quot;,
-                      Arial, Helvetica, sans-serif;
-                    font-size: 30px;
-                    font-weight: 900;
-                    color: #ffffff;
-                    text-transform: uppercase;
-                    letter-spacing: 1px;
-                  "
-                >
-                  Up to 30% Off
-                </h3>
-                <p
-                  style="
-                    margin: 0;
-                    font-family:
-                      &quot;Futura Bold Condensed&quot;, &quot;Futura&quot;,
-                      Arial, Helvetica, sans-serif;
-                    font-size: 14px;
-                    color: #ffffff;
-                    line-height: 1.5;
-                    opacity: 0.9;
-                  "
-                >
-                  Selected styles from the new season collection. Nike Members
-                  get early access.
-                </p>
-              </td>
-            </tr>
-
-            <!-- ============================
-               SECTION 4: PRODUCT HIGHLIGHTS
-          ============================ -->
+               SECTION 5: PRODUCT HIGHLIGHTS (3 items)
+            ============================ -->
             <tr>
               <td
                 style="
@@ -404,9 +488,7 @@
                 <p
                   style="
                     margin: 0 0 4px;
-                    font-family:
-                      &quot;Futura Bold Condensed&quot;, &quot;Futura&quot;,
-                      Arial, Helvetica, sans-serif;
+                    font-family: Arial, Helvetica, sans-serif;
                     font-size: 11px;
                     font-weight: 700;
                     letter-spacing: 3px;
@@ -414,14 +496,12 @@
                     text-transform: uppercase;
                   "
                 >
-                  Featured Drops
+                  This Week's Picks
                 </p>
                 <h3
                   style="
                     margin: 0 0 28px;
-                    font-family:
-                      &quot;Futura Bold Condensed&quot;, &quot;Futura&quot;,
-                      Arial, Helvetica, sans-serif;
+                    font-family: Arial, Helvetica, sans-serif;
                     font-size: 24px;
                     font-weight: 900;
                     color: #111111;
@@ -429,7 +509,7 @@
                     letter-spacing: 1px;
                   "
                 >
-                  This Season's Must-Haves
+                  Top Performance Picks
                 </h3>
 
                 <!-- Product cards row -->
@@ -441,7 +521,7 @@
                   width="100%"
                 >
                   <tr>
-                    <!-- Product 1 -->
+                    <!-- Product 1: Air Zoom Pegasus -->
                     <td
                       width="33.33%"
                       class="product-card"
@@ -464,7 +544,7 @@
                           <td style="padding: 0">
                             <img
                               src="images/AirMaxPulse.png"
-                              alt="Nike Air Max Pulse running shoe in black and orange"
+                              alt="Nike Air Zoom Pegasus running shoe in black and orange on grey background"
                               width="180"
                               style="
                                 display: block;
@@ -480,55 +560,33 @@
                             <h4
                               style="
                                 margin: 0 0 4px;
-                                font-family:
-                                  &quot;Futura Bold Condensed&quot;,
-                                  &quot;Futura&quot;, Arial, Helvetica,
-                                  sans-serif;
+                                font-family: Arial, Helvetica, sans-serif;
                                 font-size: 14px;
                                 font-weight: 700;
                                 color: #111111;
                                 text-transform: uppercase;
                               "
                             >
-                              Air Max Pulse
+                              Air Zoom Pegasus
                             </h4>
                             <p
                               style="
-                                margin: 0 0 8px;
-                                font-family:
-                                  &quot;Futura Bold Condensed&quot;,
-                                  &quot;Futura&quot;, Arial, Helvetica,
-                                  sans-serif;
+                                margin: 0 0 12px;
+                                font-family: Arial, Helvetica, sans-serif;
                                 font-size: 12px;
                                 color: #777777;
                                 line-height: 1.4;
                               "
                             >
-                              Next-gen cushioning for everyday runners.
+                              Responsive cushioning for your daily run.
                             </p>
-                            <p
-                              style="
-                                margin: 0 0 12px;
-                                font-family:
-                                  &quot;Futura Bold Condensed&quot;,
-                                  &quot;Futura&quot;, Arial, Helvetica,
-                                  sans-serif;
-                                font-size: 16px;
-                                font-weight: 700;
-                                color: #111111;
-                              "
-                            >
-                              $159.99
-                            </p>
+                            <!-- Shop CTA (dark bg — matches flyer product buttons) -->
                             <a
                               href="#"
                               style="
                                 display: inline-block;
                                 padding: 8px 18px;
-                                font-family:
-                                  &quot;Futura Bold Condensed&quot;,
-                                  &quot;Futura&quot;, Arial, Helvetica,
-                                  sans-serif;
+                                font-family: Arial, Helvetica, sans-serif;
                                 font-size: 11px;
                                 font-weight: 700;
                                 color: #ffffff;
@@ -539,119 +597,14 @@
                                 border-radius: 3px;
                               "
                             >
-                              Shop Now
+                              Shop
                             </a>
                           </td>
                         </tr>
                       </table>
                     </td>
 
-                    <!-- Product 2 -->
-                    <td
-                      width="33.33%"
-                      class="product-card"
-                      valign="top"
-                      style="padding: 0 6px 20px"
-                    >
-                      <table
-                        role="presentation"
-                        cellpadding="0"
-                        cellspacing="0"
-                        border="0"
-                        width="100%"
-                        style="
-                          background-color: #f7f7f7;
-                          border-radius: 6px;
-                          overflow: hidden;
-                        "
-                      >
-                        <tr>
-                          <td style="padding: 0">
-                            <img
-                              src="images/Pegasus41.png"
-                              alt="Nike Pegasus 41 lightweight running shoe in grey and white"
-                              width="180"
-                              style="
-                                display: block;
-                                width: 100%;
-                                height: auto;
-                                border: 0;
-                              "
-                            />
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style="padding: 16px 12px 20px">
-                            <h4
-                              style="
-                                margin: 0 0 4px;
-                                font-family:
-                                  &quot;Futura Bold Condensed&quot;,
-                                  &quot;Futura&quot;, Arial, Helvetica,
-                                  sans-serif;
-                                font-size: 14px;
-                                font-weight: 700;
-                                color: #111111;
-                                text-transform: uppercase;
-                              "
-                            >
-                              Pegasus 41
-                            </h4>
-                            <p
-                              style="
-                                margin: 0 0 8px;
-                                font-family:
-                                  &quot;Futura Bold Condensed&quot;,
-                                  &quot;Futura&quot;, Arial, Helvetica,
-                                  sans-serif;
-                                font-size: 12px;
-                                color: #777777;
-                                line-height: 1.4;
-                              "
-                            >
-                              Lightweight speed meets all-day comfort.
-                            </p>
-                            <p
-                              style="
-                                margin: 0 0 12px;
-                                font-family:
-                                  &quot;Futura Bold Condensed&quot;,
-                                  &quot;Futura&quot;, Arial, Helvetica,
-                                  sans-serif;
-                                font-size: 16px;
-                                font-weight: 700;
-                                color: #111111;
-                              "
-                            >
-                              $139.99
-                            </p>
-                            <a
-                              href="#"
-                              style="
-                                display: inline-block;
-                                padding: 8px 18px;
-                                font-family:
-                                  &quot;Futura Bold Condensed&quot;,
-                                  &quot;Futura&quot;, Arial, Helvetica,
-                                  sans-serif;
-                                font-size: 11px;
-                                font-weight: 700;
-                                color: #ffffff;
-                                background-color: #111111;
-                                text-decoration: none;
-                                text-transform: uppercase;
-                                letter-spacing: 1px;
-                                border-radius: 3px;
-                              "
-                            >
-                              Shop Now
-                            </a>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-
-                    <!-- Product 3 -->
+                    <!-- Product 2: Vomero 18 -->
                     <td
                       width="33.33%"
                       class="product-card"
@@ -674,7 +627,7 @@
                           <td style="padding: 0">
                             <img
                               src="images/Vomero18.png"
-                              alt="Nike Vomero 18 premium cushioned running shoe in white"
+                              alt="Nike Vomero 18 premium cushioned shoe in white on grey background"
                               width="180"
                               style="
                                 display: block;
@@ -690,10 +643,7 @@
                             <h4
                               style="
                                 margin: 0 0 4px;
-                                font-family:
-                                  &quot;Futura Bold Condensed&quot;,
-                                  &quot;Futura&quot;, Arial, Helvetica,
-                                  sans-serif;
+                                font-family: Arial, Helvetica, sans-serif;
                                 font-size: 14px;
                                 font-weight: 700;
                                 color: #111111;
@@ -704,41 +654,21 @@
                             </h4>
                             <p
                               style="
-                                margin: 0 0 8px;
-                                font-family:
-                                  &quot;Futura Bold Condensed&quot;,
-                                  &quot;Futura&quot;, Arial, Helvetica,
-                                  sans-serif;
+                                margin: 0 0 12px;
+                                font-family: Arial, Helvetica, sans-serif;
                                 font-size: 12px;
                                 color: #777777;
                                 line-height: 1.4;
                               "
                             >
-                              Premium cushion for marathon-ready comfort.
-                            </p>
-                            <p
-                              style="
-                                margin: 0 0 12px;
-                                font-family:
-                                  &quot;Futura Bold Condensed&quot;,
-                                  &quot;Futura&quot;, Arial, Helvetica,
-                                  sans-serif;
-                                font-size: 16px;
-                                font-weight: 700;
-                                color: #111111;
-                              "
-                            >
-                              $179.99
+                              Marathon-ready comfort, every stride.
                             </p>
                             <a
                               href="#"
                               style="
                                 display: inline-block;
                                 padding: 8px 18px;
-                                font-family:
-                                  &quot;Futura Bold Condensed&quot;,
-                                  &quot;Futura&quot;, Arial, Helvetica,
-                                  sans-serif;
+                                font-family: Arial, Helvetica, sans-serif;
                                 font-size: 11px;
                                 font-weight: 700;
                                 color: #ffffff;
@@ -749,7 +679,89 @@
                                 border-radius: 3px;
                               "
                             >
-                              Shop Now
+                              Shop
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+
+                    <!-- Product 3: Air Max -->
+                    <td
+                      width="33.33%"
+                      class="product-card"
+                      valign="top"
+                      style="padding: 0 6px 20px"
+                    >
+                      <table
+                        role="presentation"
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                        width="100%"
+                        style="
+                          background-color: #f7f7f7;
+                          border-radius: 6px;
+                          overflow: hidden;
+                        "
+                      >
+                        <tr>
+                          <td style="padding: 0">
+                            <img
+                              src="images/Pegasus41.png"
+                              alt="Nike Air Max running shoe in grey and white on grey background"
+                              width="180"
+                              style="
+                                display: block;
+                                width: 100%;
+                                height: auto;
+                                border: 0;
+                              "
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 16px 12px 20px">
+                            <h4
+                              style="
+                                margin: 0 0 4px;
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-size: 14px;
+                                font-weight: 700;
+                                color: #111111;
+                                text-transform: uppercase;
+                              "
+                            >
+                              Air Max Pulse
+                            </h4>
+                            <p
+                              style="
+                                margin: 0 0 12px;
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-size: 12px;
+                                color: #777777;
+                                line-height: 1.4;
+                              "
+                            >
+                              Next-gen Air for all-day energy.
+                            </p>
+                            <a
+                              href="#"
+                              style="
+                                display: inline-block;
+                                padding: 8px 18px;
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-size: 11px;
+                                font-weight: 700;
+                                color: #ffffff;
+                                background-color: #111111;
+                                text-decoration: none;
+                                text-transform: uppercase;
+                                letter-spacing: 1px;
+                                border-radius: 3px;
+                              "
+                            >
+                              Shop
                             </a>
                           </td>
                         </tr>
@@ -761,9 +773,9 @@
             </tr>
 
             <!-- ============================
-               SECTION 5: BENEFITS / FEATURES
-               Editorial-style tech specs strip
-           ============================ -->
+               SECTION 6: TIPS / CONTENT SECTION
+               Runner's Tip of the Week
+            ============================ -->
             <tr>
               <td
                 style="
@@ -772,12 +784,10 @@
                   text-align: center;
                 "
               >
-                <h3
+                <p
                   style="
                     margin: 0 0 6px;
-                    font-family:
-                      &quot;Futura Bold Condensed&quot;, &quot;Futura&quot;,
-                      Arial, Helvetica, sans-serif;
+                    font-family: Arial, Helvetica, sans-serif;
                     font-size: 13px;
                     font-weight: 700;
                     letter-spacing: 3px;
@@ -785,126 +795,35 @@
                     text-transform: uppercase;
                   "
                 >
-                  The Tech Behind the Speed
-                </h3>
-                <p
+                  Runner's Tip of the Week
+                </p>
+                <h3
                   style="
-                    margin: 0 0 32px;
-                    font-family:
-                      &quot;Futura Bold Condensed&quot;, &quot;Futura&quot;,
-                      Arial, Helvetica, sans-serif;
-                    font-size: 22px;
+                    margin: 0 0 16px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 24px;
                     font-weight: 900;
                     color: #ffffff;
                     text-transform: uppercase;
                     letter-spacing: 1px;
                   "
                 >
-                  Every detail, engineered.
-                </p>
-
-                <!-- Row 1: Two stat blocks -->
+                  Train Smarter, Not Harder
+                </h3>
+                <!-- Tip divider -->
                 <table
                   role="presentation"
                   cellpadding="0"
                   cellspacing="0"
                   border="0"
-                  width="100%"
-                >
-                  <tr>
-                    <td
-                      width="50%"
-                      class="benefit-cell"
-                      valign="top"
-                      style="
-                        padding: 0 12px 24px;
-                        text-align: center;
-                        border-right: 1px solid #333333;
-                      "
-                    >
-                      <p
-                        style="
-                          margin: 0 0 2px;
-                          font-family:
-                            &quot;Futura Bold Condensed&quot;,
-                            &quot;Futura&quot;, Arial, Helvetica, sans-serif;
-                          font-size: 40px;
-                          font-weight: 900;
-                          color: #ffffff;
-                          line-height: 1;
-                        "
-                      >
-                        6.7<span style="font-size: 18px; color: #ff3e00"
-                          >oz</span
-                        >
-                      </p>
-                      <p
-                        style="
-                          margin: 0;
-                          font-family:
-                            &quot;Futura Bold Condensed&quot;,
-                            &quot;Futura&quot;, Arial, Helvetica, sans-serif;
-                          font-size: 12px;
-                          color: #999999;
-                          text-transform: uppercase;
-                          letter-spacing: 2px;
-                        "
-                      >
-                        Ultra-light build
-                      </p>
-                    </td>
-                    <td
-                      width="50%"
-                      class="benefit-cell"
-                      valign="top"
-                      style="padding: 0 12px 24px; text-align: center"
-                    >
-                      <p
-                        style="
-                          margin: 0 0 2px;
-                          font-family:
-                            &quot;Futura Bold Condensed&quot;,
-                            &quot;Futura&quot;, Arial, Helvetica, sans-serif;
-                          font-size: 40px;
-                          font-weight: 900;
-                          color: #ffffff;
-                          line-height: 1;
-                        "
-                      >
-                        40<span style="font-size: 18px; color: #ff3e00">%</span>
-                      </p>
-                      <p
-                        style="
-                          margin: 0;
-                          font-family:
-                            &quot;Futura Bold Condensed&quot;,
-                            &quot;Futura&quot;, Arial, Helvetica, sans-serif;
-                          font-size: 12px;
-                          color: #999999;
-                          text-transform: uppercase;
-                          letter-spacing: 2px;
-                        "
-                      >
-                        More energy return
-                      </p>
-                    </td>
-                  </tr>
-                </table>
-
-                <!-- Divider line -->
-                <table
-                  role="presentation"
-                  cellpadding="0"
-                  cellspacing="0"
-                  border="0"
-                  width="80%"
+                  width="50"
                   align="center"
-                  style="margin: 8px auto 24px"
+                  style="margin: 0 auto 20px"
                 >
                   <tr>
                     <td
                       style="
-                        border-top: 1px solid #333333;
+                        border-top: 2px solid #ff3e00;
                         font-size: 0;
                         line-height: 0;
                       "
@@ -913,140 +832,92 @@
                     </td>
                   </tr>
                 </table>
-
-                <!-- Row 2: Two stat blocks -->
-                <table
-                  role="presentation"
-                  cellpadding="0"
-                  cellspacing="0"
-                  border="0"
-                  width="100%"
+                <p
+                  style="
+                    margin: 0 0 4px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 15px;
+                    line-height: 1.7;
+                    color: #bbbbbb;
+                    max-width: 460px;
+                    margin-left: auto;
+                    margin-right: auto;
+                  "
                 >
-                  <tr>
-                    <td
-                      width="50%"
-                      class="benefit-cell"
-                      valign="top"
-                      style="
-                        padding: 0 12px 8px;
-                        text-align: center;
-                        border-right: 1px solid #333333;
-                      "
-                    >
-                      <p
-                        style="
-                          margin: 0 0 2px;
-                          font-family:
-                            &quot;Futura Bold Condensed&quot;,
-                            &quot;Futura&quot;, Arial, Helvetica, sans-serif;
-                          font-size: 40px;
-                          font-weight: 900;
-                          color: #ffffff;
-                          line-height: 1;
-                        "
-                      >
-                        360<span style="font-size: 18px; color: #ff3e00"
-                          >&deg;</span
-                        >
-                      </p>
-                      <p
-                        style="
-                          margin: 0;
-                          font-family:
-                            &quot;Futura Bold Condensed&quot;,
-                            &quot;Futura&quot;, Arial, Helvetica, sans-serif;
-                          font-size: 12px;
-                          color: #999999;
-                          text-transform: uppercase;
-                          letter-spacing: 2px;
-                        "
-                      >
-                        Breathable mesh
-                      </p>
-                    </td>
-                    <td
-                      width="50%"
-                      class="benefit-cell"
-                      valign="top"
-                      style="padding: 0 12px 8px; text-align: center"
-                    >
-                      <p
-                        style="
-                          margin: 0 0 2px;
-                          font-family:
-                            &quot;Futura Bold Condensed&quot;,
-                            &quot;Futura&quot;, Arial, Helvetica, sans-serif;
-                          font-size: 40px;
-                          font-weight: 900;
-                          color: #ffffff;
-                          line-height: 1;
-                        "
-                      >
-                        All<span style="font-size: 18px; color: #ff3e00"
-                          >-day</span
-                        >
-                      </p>
-                      <p
-                        style="
-                          margin: 0;
-                          font-family:
-                            &quot;Futura Bold Condensed&quot;,
-                            &quot;Futura&quot;, Arial, Helvetica, sans-serif;
-                          font-size: 12px;
-                          color: #999999;
-                          text-transform: uppercase;
-                          letter-spacing: 2px;
-                        "
-                      >
-                        Street to track ready
-                      </p>
-                    </td>
-                  </tr>
-                </table>
+                  Focus on consistency over intensity. Small daily runs build
+                  long-term performance. Start with 20 minutes a day and
+                  increase by 10% each week — your body will thank you.
+                </p>
               </td>
             </tr>
 
             <!-- ============================
-               SECTION 6: SECONDARY CTA
-          ============================ -->
+               SECTION 7: SECONDARY FEATURE
+               "Designed for Comfort. Built for Speed."
+            ============================ -->
             <tr>
               <td
                 style="
-                  background-color: #111111;
+                  background-color: #ffffff;
                   padding: 44px 40px;
                   text-align: center;
                 "
               >
+                <p
+                  style="
+                    margin: 0 0 6px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 11px;
+                    font-weight: 700;
+                    letter-spacing: 3px;
+                    color: #999999;
+                    text-transform: uppercase;
+                  "
+                >
+                  New Collection
+                </p>
                 <h3
                   style="
-                    margin: 0 0 8px;
-                    font-family:
-                      &quot;Futura Bold Condensed&quot;, &quot;Futura&quot;,
-                      Arial, Helvetica, sans-serif;
+                    margin: 0 0 12px;
+                    font-family: Arial, Helvetica, sans-serif;
                     font-size: 24px;
                     font-weight: 900;
-                    color: #ffffff;
+                    color: #111111;
                     text-transform: uppercase;
                     letter-spacing: 1px;
                   "
                 >
-                  Don't Miss the Drop
+                  Designed for Comfort.<br />Built for Speed.
                 </h3>
                 <p
                   style="
                     margin: 0 0 24px;
-                    font-family:
-                      &quot;Futura Bold Condensed&quot;, &quot;Futura&quot;,
-                      Arial, Helvetica, sans-serif;
-                    font-size: 14px;
-                    color: #bbbbbb;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 15px;
                     line-height: 1.6;
+                    color: #777777;
                   "
                 >
-                  Join Nike Members for exclusive early access, free shipping,
-                  and 30-day returns.
+                  From track sessions to city streets, the new season collection
+                  <br class="hide-mobile" />delivers performance where it
+                  matters. Lightweight, breathable, and race-day ready.
                 </p>
-                <!-- Secondary CTA Button -->
+                <!-- Secondary image placeholder -->
+                <img
+                  src="images/newsletter-collection.png"
+                  alt="Nike running collection lifestyle shot — shoes and apparel on a minimalist background"
+                  width="520"
+                  style="
+                    display: block;
+                    width: 100%;
+                    max-width: 520px;
+                    height: auto;
+                    border: 0;
+                    border-radius: 6px;
+                    margin: 0 auto 24px;
+                  "
+                />
+                <!-- CTA Button (accent — matches flyer secondary CTA) -->
                 <table
                   role="presentation"
                   cellpadding="0"
@@ -1057,17 +928,15 @@
                   <tr>
                     <td
                       align="center"
-                      style="border-radius: 4px; background-color: #ff3e00"
+                      style="border-radius: 4px; background-color: #111111"
                     >
                       <a
                         href="#"
                         target="_blank"
                         style="
                           display: inline-block;
-                          padding: 14px 44px;
-                          font-family:
-                            &quot;Futura Bold Condensed&quot;,
-                            &quot;Futura&quot;, Arial, Helvetica, sans-serif;
+                          padding: 14px 40px;
+                          font-family: Arial, Helvetica, sans-serif;
                           font-size: 14px;
                           font-weight: 700;
                           color: #ffffff;
@@ -1077,7 +946,7 @@
                           border-radius: 4px;
                         "
                       >
-                        Become a Member
+                        View Collection
                       </a>
                     </td>
                   </tr>
@@ -1086,24 +955,61 @@
             </tr>
 
             <!-- ============================
-               SECTION 7: FOOTER
-          ============================ -->
+               SECTION 8: COMMUNITY / SOCIAL
+            ============================ -->
             <tr>
               <td
                 style="
-                  background-color: #1a1a1a;
-                  padding: 36px 40px;
+                  background-color: #111111;
+                  padding: 40px 40px;
                   text-align: center;
                 "
               >
-                <!-- Social media icons (text placeholders) -->
+                <p
+                  style="
+                    margin: 0 0 6px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 11px;
+                    font-weight: 700;
+                    letter-spacing: 3px;
+                    color: #ff3e00;
+                    text-transform: uppercase;
+                  "
+                >
+                  Join the Movement
+                </p>
+                <h3
+                  style="
+                    margin: 0 0 12px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 24px;
+                    font-weight: 900;
+                    color: #ffffff;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                  "
+                >
+                  Stay Connected. Stay Inspired.
+                </h3>
+                <p
+                  style="
+                    margin: 0 0 24px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 14px;
+                    line-height: 1.6;
+                    color: #bbbbbb;
+                  "
+                >
+                  Join the Nike community for exclusive content, training tips,
+                  and early drops.
+                </p>
+                <!-- Social icons row -->
                 <table
                   role="presentation"
                   cellpadding="0"
                   cellspacing="0"
                   border="0"
                   align="center"
-                  style="margin-bottom: 20px"
                 >
                   <tr>
                     <td style="padding: 0 8px">
@@ -1111,56 +1017,14 @@
                         href="#"
                         style="
                           display: inline-block;
-                          width: 38px;
-                          height: 38px;
-                          line-height: 38px;
+                          width: 42px;
+                          height: 42px;
+                          line-height: 42px;
                           text-align: center;
                           background-color: #333333;
                           border-radius: 50%;
                           color: #ffffff;
-                          font-size: 16px;
-                          text-decoration: none;
-                        "
-                        title="Facebook"
-                        aria-label="Follow Nike on Facebook"
-                      >
-                        <i class="fa-brands fa-facebook-f"></i>
-                      </a>
-                    </td>
-                    <td style="padding: 0 8px">
-                      <a
-                        href="#"
-                        style="
-                          display: inline-block;
-                          width: 38px;
-                          height: 38px;
-                          line-height: 38px;
-                          text-align: center;
-                          background-color: #333333;
-                          border-radius: 50%;
-                          color: #ffffff;
-                          font-size: 16px;
-                          text-decoration: none;
-                        "
-                        title="X (Twitter)"
-                        aria-label="Follow Nike on X"
-                      >
-                        <i class="fa-brands fa-x-twitter"></i>
-                      </a>
-                    </td>
-                    <td style="padding: 0 8px">
-                      <a
-                        href="#"
-                        style="
-                          display: inline-block;
-                          width: 38px;
-                          height: 38px;
-                          line-height: 38px;
-                          text-align: center;
-                          background-color: #333333;
-                          border-radius: 50%;
-                          color: #ffffff;
-                          font-size: 16px;
+                          font-size: 18px;
                           text-decoration: none;
                         "
                         title="Instagram"
@@ -1174,14 +1038,56 @@
                         href="#"
                         style="
                           display: inline-block;
-                          width: 38px;
-                          height: 38px;
-                          line-height: 38px;
+                          width: 42px;
+                          height: 42px;
+                          line-height: 42px;
                           text-align: center;
                           background-color: #333333;
                           border-radius: 50%;
                           color: #ffffff;
-                          font-size: 16px;
+                          font-size: 18px;
+                          text-decoration: none;
+                        "
+                        title="X (Twitter)"
+                        aria-label="Follow Nike on X"
+                      >
+                        <i class="fa-brands fa-x-twitter"></i>
+                      </a>
+                    </td>
+                    <td style="padding: 0 8px">
+                      <a
+                        href="#"
+                        style="
+                          display: inline-block;
+                          width: 42px;
+                          height: 42px;
+                          line-height: 42px;
+                          text-align: center;
+                          background-color: #333333;
+                          border-radius: 50%;
+                          color: #ffffff;
+                          font-size: 18px;
+                          text-decoration: none;
+                        "
+                        title="Facebook"
+                        aria-label="Follow Nike on Facebook"
+                      >
+                        <i class="fa-brands fa-facebook-f"></i>
+                      </a>
+                    </td>
+                    <td style="padding: 0 8px">
+                      <a
+                        href="#"
+                        style="
+                          display: inline-block;
+                          width: 42px;
+                          height: 42px;
+                          line-height: 42px;
+                          text-align: center;
+                          background-color: #333333;
+                          border-radius: 50%;
+                          color: #ffffff;
+                          font-size: 18px;
                           text-decoration: none;
                         "
                         title="YouTube"
@@ -1192,43 +1098,135 @@
                     </td>
                   </tr>
                 </table>
+              </td>
+            </tr>
 
-                <!-- Footer links -->
-                <p
+            <!-- ============================
+               SECTION 9: FINAL CTA
+               Strong closing call-to-action
+            ============================ -->
+            <tr>
+              <td
+                style="
+                  background-color: #ff3e00;
+                  padding: 40px 40px;
+                  text-align: center;
+                "
+              >
+                <h3
                   style="
                     margin: 0 0 8px;
-                    font-family:
-                      &quot;Futura Bold Condensed&quot;, &quot;Futura&quot;,
-                      Arial, Helvetica, sans-serif;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 26px;
+                    font-weight: 900;
+                    color: #ffffff;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                  "
+                >
+                  Ready to Move?
+                </h3>
+                <p
+                  style="
+                    margin: 0 0 24px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 15px;
+                    color: #ffffff;
+                    line-height: 1.5;
+                    opacity: 0.9;
+                  "
+                >
+                  Upgrade your run today. New arrivals are waiting.
+                </p>
+                <!-- Closing CTA Button (white on accent — high contrast) -->
+                <table
+                  role="presentation"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  align="center"
+                >
+                  <tr>
+                    <td
+                      align="center"
+                      style="border-radius: 4px; background-color: #ffffff"
+                    >
+                      <a
+                        href="#"
+                        target="_blank"
+                        style="
+                          display: inline-block;
+                          padding: 14px 44px;
+                          font-family: Arial, Helvetica, sans-serif;
+                          font-size: 14px;
+                          font-weight: 700;
+                          color: #111111;
+                          text-decoration: none;
+                          letter-spacing: 2px;
+                          text-transform: uppercase;
+                          border-radius: 4px;
+                        "
+                      >
+                        Shop Nike
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- ============================
+               SECTION 10: FOOTER
+               Links, contact, unsubscribe, legal
+            ============================ -->
+            <tr>
+              <td
+                style="
+                  background-color: #1a1a1a;
+                  padding: 36px 40px;
+                  text-align: center;
+                "
+              >
+                <!-- Footer navigation links -->
+                <p
+                  style="
+                    margin: 0 0 12px;
+                    font-family: Arial, Helvetica, sans-serif;
                     font-size: 12px;
                     color: #888888;
                     line-height: 1.6;
                   "
                 >
-                  <a href="#" style="color: #aaaaaa; text-decoration: underline"
+                  <a
+                    href="#"
+                    style="color: #aaaaaa; text-decoration: underline"
                     >Nike.com</a
                   >
                   &nbsp;|&nbsp;
-                  <a href="#" style="color: #aaaaaa; text-decoration: underline"
+                  <a
+                    href="#"
+                    style="color: #aaaaaa; text-decoration: underline"
                     >Help</a
                   >
                   &nbsp;|&nbsp;
-                  <a href="#" style="color: #aaaaaa; text-decoration: underline"
+                  <a
+                    href="#"
+                    style="color: #aaaaaa; text-decoration: underline"
                     >Store Locator</a
                   >
                   &nbsp;|&nbsp;
-                  <a href="#" style="color: #aaaaaa; text-decoration: underline"
+                  <a
+                    href="#"
+                    style="color: #aaaaaa; text-decoration: underline"
                     >Privacy Policy</a
                   >
                 </p>
 
-                <!-- Contact info placeholder -->
+                <!-- Contact / address placeholder -->
                 <p
                   style="
                     margin: 0 0 12px;
-                    font-family:
-                      &quot;Futura Bold Condensed&quot;, &quot;Futura&quot;,
-                      Arial, Helvetica, sans-serif;
+                    font-family: Arial, Helvetica, sans-serif;
                     font-size: 11px;
                     color: #666666;
                     line-height: 1.5;
@@ -1237,13 +1235,11 @@
                   Nike, Inc. &bull; One Bowerman Drive, Beaverton, OR 97005, USA
                 </p>
 
-                <!-- Unsubscribe -->
+                <!-- Unsubscribe & preference management -->
                 <p
                   style="
-                    margin: 0;
-                    font-family:
-                      &quot;Futura Bold Condensed&quot;, &quot;Futura&quot;,
-                      Arial, Helvetica, sans-serif;
+                    margin: 0 0 16px;
+                    font-family: Arial, Helvetica, sans-serif;
                     font-size: 11px;
                     color: #555555;
                     line-height: 1.5;
@@ -1251,13 +1247,33 @@
                 >
                   You are receiving this email because you signed up at
                   nike.com.<br />
-                  <a href="#" style="color: #aaaaaa; text-decoration: underline"
+                  <a
+                    href="#"
+                    style="color: #aaaaaa; text-decoration: underline"
                     >Unsubscribe</a
                   >
                   &nbsp;|&nbsp;
-                  <a href="#" style="color: #aaaaaa; text-decoration: underline"
+                  <a
+                    href="#"
+                    style="color: #aaaaaa; text-decoration: underline"
                     >Manage Preferences</a
                   >
+                </p>
+
+                <!-- Legal text -->
+                <p
+                  style="
+                    margin: 0;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 10px;
+                    color: #444444;
+                    line-height: 1.5;
+                  "
+                >
+                  &copy; 2026 Nike, Inc. All rights reserved. Nike and the
+                  Swoosh design are registered trademarks of Nike, Inc.<br />
+                  This email was sent for promotional purposes only and does not
+                  constitute a contractual offer.
                 </p>
               </td>
             </tr>
